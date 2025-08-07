@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 16px;
+    height: 100vh;
+    background: #ffc0cb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anniversary_card {
+    position: relative;
+    width: 900px;
+    height: 800px;
+    perspective: 2500px;
+    display: flex;
+}
+
+.front_card {
+    position: absolute;
+    width: 450px;
+    height: 800px;
+    background-color: whitesmoke;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+    box-shadow: 0 24px 40px -8px #ff1493;
+    z-index: 3;
+}
+
+.front_img {
+    width: 450px;
+    margin: 0;
+    margin-top: 100px;
+    position: relative;
+}
+
+.front_text {
+    color: #A60657;
+    font-family: 'palisade';
+    font-size: 60px;
+    text-align: center;
+}
+
+
+
+@font-face {
+    font-family: 'palisade';
+    src: url('./Palisade.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face{
+     font-family: 'mic';
+    src: url('./Milchella-Regular.ttf') format('opentype');
+}
+
+@font-face{
+     font-family: 'bae';
+    src: url('./Baby Sparkle.otf') format('opentype');
+}
+
+@font-face{
+     font-family: 'sam';
+    src: url('./Samarata.ttf') format('opentype');
+}
+
+
+
+
+
+
+.inside_card, .back_card {
+    width: 450px;
+    height: 800px;
+    background-color: whitesmoke;
+    box-shadow: 0 24px 40px -8px #ff1493;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.inside_card {
+    z-index: 2;
+}
+
+.back_card {
+    z-index: 1;
+}
+
+.inside_text, .back_text {
+    color: #A60657;
+    font-family: 'mic';
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Flip on hover */
+.anniversary_card:hover .front_card {
+    transform: rotateY(-160deg);
+}
+
+.date{
+    font-family:'sam' ;
+    font-size: 23px;
+}
